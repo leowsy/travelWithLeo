@@ -1,0 +1,461 @@
+* {
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+body {
+  background-color: #cfe7e5;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(./Image/PlaywriteAUNSW-VariableFont_wght.ttf);
+}
+
+header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h2 {
+  font-family: myFirstFont;
+  font-size: 2rem; /* Use relative units for responsiveness */
+  margin-left: 20px;
+  color: rgb(28, 238, 253); /* Set text color */
+  font-weight: bold; /* Make the font bold */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 12px; /* Add vertical padding */
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  margin-right: 30px;
+  padding: 0;
+}
+
+header a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Open Sans", "Helvetica Neue";
+  padding: 15px 20px;
+}
+
+header header a:hover {
+  background-color: rgb(194, 194, 194);
+}
+
+.journey:hover {
+  position: relative;
+}
+
+.journey-destination {
+  display: none; /* Hide the dropdown initially */
+  position: absolute; /* Position it absolutely */
+  top: 100%; /* Position below the parent list item */
+  background-color: rgba(255, 255, 255, 0.9); /* Background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */ /* Ensure it appears above other content */
+  min-width: 141px;
+}
+
+header li {
+  position: relative; /* Make the <li> a positioning context */
+}
+
+header li:hover .journey-destination {
+  display: block; /* Show content on hover */
+  margin-top: 15px;
+}
+
+.journey-destination li {
+  padding: 0; /* Padding for dropdown items */
+}
+.journey-destination li a {
+  color: rgb(0, 0, 0); /* Dropdown link color */
+  text-decoration: none; /* Remove underline */
+  display: block;
+  padding: 12px 20px;
+}
+
+header li:hover > a,
+.journey-destination li a:hover {
+  background-color: rgb(194, 194, 194); /* Background on hover */
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+footer {
+  background-color: rgba(
+    16,
+    16,
+    16,
+    0.8
+  ); /* Semi-transparent background for visibility */
+  color: #ffffff; /* Dark text color for contrast */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Vertical padding */
+  width: 100%; /* Ensure footer takes full width */
+  background-repeat: repeat-x;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+.fa {
+  margin: 5px;
+  padding: 10px;
+  font-size: 15px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 25%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+.fa-instagram {
+  background: #f09433;
+  color: white;
+}
+
+.background {
+  background-image: url("./Image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 92vh;
+}
+
+.introduction {
+  margin-top: 28vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 30px;
+  background-color: rgba(133, 132, 132, 0.464);
+  border-radius: 10px;
+  max-height: fit-content;
+  width: 45vw;
+}
+
+@font-face {
+  font-family: mySecondFont;
+  src: url(./Image/LaBelleAurore-Regular.ttf);
+}
+
+.introduction h1 {
+  font-family: mySecondFont;
+  font-size: 60px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.introduction p {
+  font-style: italic;
+  font-size: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.introduction button {
+  margin-top: 30px;
+  padding: 15px 30px; /* Button padding */
+  background-color: yellowgreen; /* Button color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded button corners */
+  color: rgb(255, 255, 255); /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  font-weight: bolder;
+  width: fit-content;
+}
+
+.introduction button:hover {
+  background-color: darkgreen; /* Darken button on hover */
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); /* Start off-screen to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+.slideshow-container {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 70%;
+  margin-bottom: auto;
+}
+
+.slideshow-container img {
+  max-width: 100%; /* Ensure images are responsive */
+  min-height: 23vh;
+  border-radius: 20px;
+}
+
+.img-container.visible {
+  opacity: 1; /* Make sure opacity is 1 when shown */
+}
+
+.img-container {
+  position: relative;
+  text-align: center;
+  opacity: 0; /* Start hidden */
+  animation: fadeInTop 2s backwards; /* Apply the animation */
+  text-decoration: none;
+}
+
+.img-container a {
+  color: #cfe7e5;
+}
+
+.bottom-left {
+  position: absolute;
+  font-weight: bolder;
+  animation: fadeInTop 2s backwards;
+  font-size: 22px;
+  bottom: 2vh;
+  left: 0.5vw; /* Adjust horizontal position */
+}
+
+.cityIntro {
+  background-color: gray;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.img-container:hover {
+  opacity: 0.8;
+}
+
+.about {
+  min-height: 82.3vh;
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.traveler {
+  margin-right: 30px; /* Space between image and content */
+  max-width: 700px;
+  width: 100%; /* Make the image responsive */
+}
+
+.traveler img {
+  max-width: 800px; /* Make the image responsive */
+}
+
+.content h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  max-width: 600px;
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.5em;
+  padding-left: 30px;
+  border-left: 2px double rgba(133, 132, 132, 0.464);
+}
+
+.content p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  margin: 9.5vh 8vw;
+  min-height: 73vh;
+}
+
+.journey-content {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+}
+
+.journey-content h2 {
+  font-size: 2em;
+  color: #1d9ff6fb;
+  margin-top: 1vh;
+}
+.journey-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-top: 1vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.journey-content ol {
+  padding: 0;
+  font-size: 1.2em;
+}
+.journey-content li {
+  margin: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#read {
+  background: none;
+  border: none;
+  font-size: 15px;
+  margin: auto;
+  margin-top: 5vh;
+}
+
+#more {
+  display: none;
+}
+
+#read:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.slider {
+  position: relative;
+  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+}
+
+.slider img {
+  width: 100%;
+  height: 50vh;
+  z-index: 1;
+  position: relative;
+}
+
+.arrow-journey {
+  font-size: 3.5em;
+  user-select: none; /* Prevents text selection */
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.4;
+  color: rgb(194, 194, 194);
+}
+
+.left-arrow {
+  position: absolute;
+  left: 16px;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 16px;
+}
+
+.arrow-journey:hover {
+  opacity: 1;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px; /* Position above the bottom */
+  left: 20px; /* Position from the left */
+  right: 20px; /* Position from the right */
+  color: rgb(255, 255, 255);
+  background-color: rgb(194, 194, 194, 0.25);
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1; /* Ensure caption is on top of the image */
+}
+
+.slider .indicators {
+  display: flex; /* Use flexbox for centering */
+  position: absolute;
+  bottom: -4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 48vh;
+}
+
+.active-indicator {
+  background-color: #717171;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  flex: 1; /* Allow the container to grow */
+  min-height: 82.3vh;
+  transition: width;
+}
+
+.contact {
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 50px;
+  max-width: 600px;
+  border-radius: 10px;
+}
